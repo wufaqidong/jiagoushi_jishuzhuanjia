@@ -1,0 +1,6 @@
+# Project exclude paths
+/jiagoushi_jishuzhuanjia_api/target/
+/jiagoushi_jishuzhuanjia_common/target/
+/jiagoushi_jishuzhuanjia_mapper/target/
+/jiagoushi_jishuzhuanjia_pojo/target/
+/jiagoushi_jishuzhuanjia_service/target/

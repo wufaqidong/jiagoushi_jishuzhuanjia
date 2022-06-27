@@ -10,7 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
 <!--    默认打包方式为jar，子模块打包都是jar-->
-<!--    <packaging>jar</packaging>-->
 
     <artifactId>jiagoushi_jishuzhuanjia_common</artifactId>
 

@@ -15,10 +15,10 @@ server:
 #
 ############################################################
 spring:
-  datasource:                                           # 数据源的相关配置
+  datasource: # 数据源的相关配置
     type: com.zaxxer.hikari.HikariDataSource          # 数据源类型：HikariCP
-    driver-class-name: com.mysql.jdbc.Driver          # mysql驱动
-    url: jdbc:mysql://localhost:3306/foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver          # mysql驱动
+    url: jdbc:mysql://localhost:3306/muke_foodie-shop-dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=true&serverTimezone=UTC
     username: root
     password: 123456
     hikari:
@@ -31,6 +31,11 @@ spring:
       max-lifetime: 1800000           # 连接的生命时长（毫秒），超时而且没被使用则被释放（retired），默认:30分钟 1800000ms
       connection-test-query: SELECT 1
 
+# 初始化dispatcherServlet，默认-1未开启，0及以上为开启
+  mvc:
+    servlet:
+      load-on-startup: 1
+
 ############################################################
 #
 # mybatis 配置
@@ -38,5 +43,18 @@ spring:
 ############################################################
 mybatis:
   type-aliases-package: com.imooc.pojo          # 所有POJO类所在包路径
-  mapper-locations: classpath:mapper/*.xml      # mapper映射文件
+  mapper-locations: classpath:mapper/*.xml
+
+############################################################
+#
+# mybatis mapper 配置
+#
+############################################################
+# 通用 Mapper 配置
+mapper:
+  mappers: com.qiaoqiao.my.mapper.MyMapper
+  not-empty: false
+  identity: MYSQL# mapper映射文件
+
+
 

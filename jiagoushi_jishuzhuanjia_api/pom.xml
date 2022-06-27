@@ -12,18 +12,23 @@
     <artifactId>jiagoushi_jishuzhuanjia_api</artifactId>
 
     <dependencies>
-        <!--        api -> service ->mapper -> pojo ->common-->
-        <!--        api可以使用service、pojo与common中相应的方法的-->
-        <dependency>
-            <groupId>com.qiaoqiao</groupId>
-            <artifactId>jiagoushi_jishuzhuanjia_service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.4.4</version>
         </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-core</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qiaoqiao</groupId>
+            <artifactId>jiagoushi_jishuzhuanjia_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <properties>
